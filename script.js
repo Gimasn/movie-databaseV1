@@ -70,7 +70,7 @@ $('.search-button').on('click', function () {
       const imdbID = $(this).data('imdbid');
   
       $.ajax({
-        url: `http://www.omdbapi.com/?apikey=146f153e&i=${imdbID}`,
+        url: `https://www.omdbapi.com/?apikey=146f153e&i=${imdbID}`,
         success: m => {
           const detailHTML = createMovieDetail(m);
           $('.modal-body').html(detailHTML);
