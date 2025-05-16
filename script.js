@@ -3,7 +3,7 @@ $('.search-button').on('click', function () {
     const keyword = $('.input-keyword').val();
   
     $.ajax({
-      url: `https://www.omdbapi.com/?apikey=146f153e&s=${keyword}`,
+      url: 'https://www.omdbapi.com/?apikey=146f153e&s=' + $('.input-keyword').val(),
       success: results => {
         const movies = results.Search;
         const cards = generateAllMovieCards(movies);
